@@ -7,8 +7,6 @@
 int main(){
 	// Greating Function
 	greet();
-	// TABLE
-	// SCOREBOARD
 
 	// POSSIBLE SCORES (if loop)
 	// 1 4 7 || 2 5 8 || 3 6 9
