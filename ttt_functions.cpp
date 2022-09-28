@@ -27,7 +27,7 @@ void grid(std::vector<char>board){
 }
 
 // Gameplay, Taken in turns allowing the user to enter a board number and replace with their symbol.
-void gameplay(int moves,int i,int position, std::vector<char>x){
+void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>usedposition){
 
 	while(moves != 0){
 
@@ -39,43 +39,189 @@ void gameplay(int moves,int i,int position, std::vector<char>x){
 		// player 1 OR player 2 selects an integer between 1-9
 		if(i == 1){
 			if(position == 1){
-				x[0] = 'X';
+				for(int z = 0; z < usedposition.size(); z++){
+					if(usedposition[z] == position){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(1);
+						x[0] = 'X';
+					}
+				}
+
 			} else if(position == 2){
-				x[1] = 'X';
+				for(int z = 0; z < usedposition.size(); z++){
+					if(usedposition[z] == position){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(2);
+						x[1] = 'X';
+					}
+				}
 			} else if(position == 3){
-				x[2] = 'X';
+				for(int z = 0; z < usedposition.size(); z++){
+					if(usedposition[z] == position){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(3);
+						x[2] = 'X';
+					}
+				}
 			} else if(position == 4){
-				x[3] = 'X';
+				for(int z = 0; z < usedposition.size(); z++){
+					if(usedposition[z] == position){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(4);
+						x[3] = 'X';
+					}
+				}
 			} else if(position == 5){
-				x[4] = 'X';
+				for(int z = 0; z < usedposition.size(); z++){
+					if(usedposition[z] == position){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(5);
+						x[4] = 'X';
+					}
+				}
 			} else if(position == 6){
-				x[5] = 'X';
+				for(int z = 0; z < usedposition.size(); z++){
+					if(usedposition[z] == position){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(6);
+						x[5] = 'X';
+					}
+				}
 			} else if(position == 7){
-				x[6] = 'X';
+				for(int z = 0; z < usedposition.size(); z++){
+					if(usedposition[z] == position){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(7);
+						x[6] = 'X';
+					}
+				}
 			} else if(position == 8){
-				x[7] = 'X';
+				for(int z = 0; z < usedposition.size(); z++){
+					if(usedposition[z] == position){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(8);
+						x[7] = 'X';
+					}
+				}
 			} else if(position == 9){
-				x[8] = 'X';
+				for(int z = 0; z < usedposition.size(); z++){
+					if(usedposition[z] == position){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(9);
+						x[8] = 'X';
+					}
+				}
 			}
+
 		} else if(i == 2){
 			if(position == 1){
-				x[0] = 'O';
+				for(int i = 9; i > 0; i--){
+					if(position == usedposition[i]){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(1);
+						x[0] = 'O';
+					}
+				}
 			} else if(position == 2){
-				x[1] = 'O';
+				for(int i = 9; i > 0; i--){
+					if(position == usedposition[i]){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(2);
+						x[1] = 'O';
+					}
+				}
 			} else if(position == 3){
-				x[2] = 'O';
+				for(int i = 9; i > 0; i--){
+					if(position == usedposition[i]){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(3);
+						x[2] = 'O';
+					}
+				}
 			} else if(position == 4){
-				x[3] = 'O';
+				for(int i = 9; i > 0; i--){
+					if(position == usedposition[i]){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(4);
+						x[3] = 'O';
+					}
+				}
 			} else if(position == 5){
-				x[4] = 'O';
+				for(int i = 9; i > 0; i--){
+					if(position == usedposition[i]){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(5);
+						x[4] = 'O';
+					}
+				}
 			} else if(position == 6){
-				x[5] = 'O';
+				for(int i = 9; i > 0; i--){
+					if(position == usedposition[i]){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(6);
+						x[5] = 'O';
+					}
+				}
 			} else if(position == 7){
-				x[6] = 'O';
+				for(int i = 9; i > 0; i--){
+					if(position == usedposition[i]){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(7);
+						x[6] = 'O';
+					}
+				}
 			} else if(position == 8){
-				x[7] = 'O';
+				for(int i = 9; i > 0; i--){
+					if(position == usedposition[i]){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(8);
+						x[7] = 'O';
+					}
+				}
 			} else if(position == 9){
-				x[8] = 'O';
+				for(int i = 9; i > 0; i--){
+					if(position == usedposition[i]){
+						std::cout << "input already has been used. skipping turn.";
+						moves++;
+					} else {
+						usedposition.push_back(9);
+						x[8] = 'O';
+					}
+				}
 			}
 		}
 		
@@ -150,7 +296,14 @@ void gameplay(int moves,int i,int position, std::vector<char>x){
 			} else {
 				i++;
 			}
-			grid(x);	
+
+			for(int i = 0;i < usedposition.size();i++){
+				std::cout << usedposition[i] << " ";
+			}
+			std::cout << "\n";
+			std::cout << moves << "\n\n";
+			grid(x);
+			
 		}
 
 		if(moves == 0){
