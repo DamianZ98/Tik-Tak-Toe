@@ -28,15 +28,16 @@ int main(){
 		// Gameplay
 		gameplay(moves,i,position,x);
 
-		std::cout << "\n\tWould you like to play again?(y/n) : ";
+		std::cout << "\n\t\tWould you like to play again?(y/n) : ";
 		std::cin>> decision;
 		if(decision == 'y'){
+			std::cout << "\n\n\t====================================================\n\n";
 			continue;
 		} else if(decision == 'n'){
 			return 0;
 		} else {
-			std::cout << "\tSorry that was an invalid input. Game will resume.";
-			continue;
+			std::cout << "\t\tSorry that was an invalid input. Game will finish.";
+			break;
 		}
 	}
 }
