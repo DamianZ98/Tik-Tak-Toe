@@ -27,7 +27,7 @@ void grid(std::vector<char>board){
 }
 
 // Gameplay, Taken in turns allowing the user to enter a board number and replace with their symbol.
-void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>usedposition){
+void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int> usedposition){
 
 	while(moves != 0){
 
@@ -39,192 +39,228 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 		// player 1 OR player 2 selects an integer between 1-9
 		if(i == 1){
 			if(position == 1){
-				for(int z = 0; z < usedposition.size(); z++){
-					if(usedposition[z] == position){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(1);
 						x[0] = 'X';
+						moves++;
+						break;
 					}
 				}
-
 			} else if(position == 2){
-				for(int z = 0; z < usedposition.size(); z++){
-					if(usedposition[z] == position){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(2);
 						x[1] = 'X';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 3){
-				for(int z = 0; z < usedposition.size(); z++){
-					if(usedposition[z] == position){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(3);
 						x[2] = 'X';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 4){
-				for(int z = 0; z < usedposition.size(); z++){
-					if(usedposition[z] == position){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(4);
 						x[3] = 'X';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 5){
-				for(int z = 0; z < usedposition.size(); z++){
-					if(usedposition[z] == position){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(5);
 						x[4] = 'X';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 6){
-				for(int z = 0; z < usedposition.size(); z++){
-					if(usedposition[z] == position){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(6);
 						x[5] = 'X';
+						moves++;
+						break;
 					}
 				}
+				}
 			} else if(position == 7){
-				for(int z = 0; z < usedposition.size(); z++){
-					if(usedposition[z] == position){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(7);
 						x[6] = 'X';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 8){
-				for(int z = 0; z < usedposition.size(); z++){
-					if(usedposition[z] == position){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(8);
 						x[7] = 'X';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 9){
-				for(int z = 0; z < usedposition.size(); z++){
-					if(usedposition[z] == position){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(9);
 						x[8] = 'X';
+						moves++;
+						break;
 					}
 				}
-			}
-
 		} else if(i == 2){
 			if(position == 1){
-				for(int i = 9; i > 0; i--){
-					if(position == usedposition[i]){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(1);
 						x[0] = 'O';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 2){
-				for(int i = 9; i > 0; i--){
-					if(position == usedposition[i]){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(2);
 						x[1] = 'O';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 3){
-				for(int i = 9; i > 0; i--){
-					if(position == usedposition[i]){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(3);
 						x[2] = 'O';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 4){
-				for(int i = 9; i > 0; i--){
-					if(position == usedposition[i]){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(4);
 						x[3] = 'O';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 5){
-				for(int i = 9; i > 0; i--){
-					if(position == usedposition[i]){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(5);
 						x[4] = 'O';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 6){
-				for(int i = 9; i > 0; i--){
-					if(position == usedposition[i]){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(6);
 						x[5] = 'O';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 7){
-				for(int i = 9; i > 0; i--){
-					if(position == usedposition[i]){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(7);
 						x[6] = 'O';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 8){
-				for(int i = 9; i > 0; i--){
-					if(position == usedposition[i]){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(8);
 						x[7] = 'O';
+						moves++;
+						break;
 					}
 				}
 			} else if(position == 9){
-				for(int i = 9; i > 0; i--){
-					if(position == usedposition[i]){
-						std::cout << "input already has been used. skipping turn.";
-						moves++;
+				for(int z = 0; z <= usedposition.size();z++){
+					if(position == usedposition[z]){
+						usedposition.push_back(position);
+						std::cout << "error";
+						break;
 					} else {
-						usedposition.push_back(9);
 						x[8] = 'O';
+						moves++;
+						break;
 					}
 				}
 			}
 		}
 		
+
+		// DELCARING A WINNER
 		if(x[0] == 'X' && x[1] == 'X' && x[2] == 'X'){ // PLAYER 1 WINS
 			grid(x);
 			std::cout << "\t\t\tPLAYER " << i << " WINS!!!\n";
