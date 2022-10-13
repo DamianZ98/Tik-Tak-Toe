@@ -11,3 +11,7 @@ ttt.o : ttt.cpp ttt_functions.h
 ttt_functions.o : ttt_functions.cpp ttt_functions.h
 	g++ -c ttt_functions.cpp $(CXXFLAGS)
 	echo 'ttt_functions.o built successfully'
+
+remove :
+	rm -r TikTakToe ttt.o ttt_functions.o
+	echo 'removed files successfully'

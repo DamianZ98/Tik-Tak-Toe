@@ -10,7 +10,6 @@ int main(){
 
 	// Variables
 	std::vector<char> x ={'1','2','3','4','5','6','7','8','9'};
-	std::vector<int> usedposition;
 	int position = 0;
 	bool game = true;
 	int moves = 9, i;
@@ -27,7 +26,7 @@ int main(){
 		// Display the grid
 		grid(x);
 		// Gameplay
-		gameplay(moves,i,position,x,usedposition);
+		gameplay(moves,i,position,x);
 
 		std::cout << "\n\t\tWould you like to play again?(y/n) : ";
 		std::cin>> decision;

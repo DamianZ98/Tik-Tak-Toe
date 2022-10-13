@@ -27,9 +27,10 @@ void grid(std::vector<char>board){
 }
 
 // Gameplay, Taken in turns allowing the user to enter a board number and replace with their symbol.
-void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int> usedposition){
-
+void gameplay(int moves,int i,int position, std::vector<char>x){	
 	while(moves != 0){
+
+		std::vector<int> usedposition;
 
 		std::cout << "\t\t\tPlayer " << i << " turn!\n";
 		std::cout << "\t\t\tenter position : ";
@@ -43,11 +44,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[0] = 'X';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 2){
@@ -55,11 +54,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[1] = 'X';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 3){
@@ -67,11 +64,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[2] = 'X';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 4){
@@ -79,11 +74,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[3] = 'X';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 5){
@@ -91,11 +84,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[4] = 'X';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 6){
@@ -103,11 +94,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[5] = 'X';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 				}
@@ -116,11 +105,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[6] = 'X';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 8){
@@ -128,11 +115,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[7] = 'X';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 9){
@@ -140,11 +125,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[8] = 'X';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 		} else if(i == 2){
@@ -153,11 +136,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[0] = 'O';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 2){
@@ -165,11 +146,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[1] = 'O';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 3){
@@ -177,11 +156,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[2] = 'O';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 4){
@@ -189,11 +166,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[3] = 'O';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 5){
@@ -201,11 +176,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[4] = 'O';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 6){
@@ -213,11 +186,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[5] = 'O';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 7){
@@ -225,11 +196,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[6] = 'O';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 8){
@@ -237,11 +206,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[7] = 'O';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			} else if(position == 9){
@@ -249,11 +216,9 @@ void gameplay(int moves,int i,int position, std::vector<char>x, std::vector<int>
 					if(position == usedposition[z]){
 						usedposition.push_back(position);
 						std::cout << "error";
-						break;
 					} else {
 						x[8] = 'O';
-						moves++;
-						break;
+						moves--;
 					}
 				}
 			}
