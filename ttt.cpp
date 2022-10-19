@@ -7,7 +7,6 @@
 #include "ttt_functions.h"
 
 int main(){
-
 	// Variables
 	std::vector<char> x ={'1','2','3','4','5','6','7','8','9'};
 	int position = 0;
@@ -21,8 +20,7 @@ int main(){
 		// Generates Random number
 		srand(time(NULL));
 		int v1 = rand() % 2 + 1;
-		i = v1;
-		
+		i = v1;		
 		// Display the grid
 		grid(x);
 		// Gameplay
