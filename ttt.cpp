@@ -13,9 +13,11 @@ int main(){
 	bool game = true;
 	int moves = 9, i;
 	char decision;
+	int player_that_won = 0;
+	int player1 = 0, player2 = 0;
+
 	// Greeting Function
 	greet();
-	
 	while(game){
 		// Generates Random number
 		srand(time(NULL));
@@ -23,8 +25,18 @@ int main(){
 		i = v1;		
 		// Display the grid
 		grid(x);
+		
 		// Gameplay
 		gameplay(moves,i,position,x);
+		player_that_won = gameplay(moves,i,position,x);
+
+		if(player_that_won == 1){
+			player1++;
+		} else if(player_that_won == 2){
+			player2++;
+		}
+
+		scoreboard(player1,player2);
 
 		std::cout << "\n\tWould you like to play again?(y/n) : ";
 		std::cin>> decision;

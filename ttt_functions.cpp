@@ -30,9 +30,11 @@ void grid(std::vector<char>board){
 }
 
 // Gameplay, Taken in turns allowing the user to enter a board number and replace with their symbol.
-void gameplay(int moves,int i,int position, std::vector<char>x){
+int gameplay(int moves,int i,int position, std::vector<char>x){
 
+	int player_that_won;
 	std::vector<int> usedpositon;
+	
 	while(moves != 0){
 
 		std::cout << "\t\tPlayer " << i << " turn!\n";
@@ -107,67 +109,67 @@ void gameplay(int moves,int i,int position, std::vector<char>x){
 		if(x[0] == 'X' && x[1] == 'X' && x[2] == 'X'){ // PLAYER 1 WINS
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 1;
 		} else if(x[3] == 'X' && x[4] == 'X' && x[5] == 'X'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 1;
 		} else if(x[6] == 'X' && x[7] == 'X' && x[8] == 'X'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 1;
 		} else if(x[0] == 'X' && x[3] == 'X' && x[6] == 'X'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 1;
 		} else if(x[1] == 'X' && x[4] == 'X' && x[7] == 'X'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 1;
 		} else if(x[2] == 'X' && x[5] == 'X' && x[8] == 'X'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 1;
 		} else if(x[0] == 'X' && x[4] == 'X' && x[8] == 'X'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 1;
 		} else if(x[2] == 'X' && x[4] == 'X' && x[6] == 'X'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 1;
 		} else if(x[0] == 'O' && x[1] == 'O' && x[2] == 'O'){ // PLAYER 2 WINS
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 2;
 		} else if(x[3] == 'O' && x[4] == 'O' && x[5] == 'O'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 2;
 		} else if(x[6] == 'O' && x[7] == 'O' && x[8] == 'O'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 2;
 		} else if(x[0] == 'O' && x[3] == 'O' && x[6] == 'O'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 2;
 		} else if(x[1] == 'O' && x[4] == 'O' && x[7] == 'O'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 2;
 		} else if(x[2] == 'O' && x[5] == 'O' && x[8] == 'O'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 2;
 		} else if(x[0] == 'O' && x[4] == 'O' && x[8] == 'O'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 2;
 		} else if(x[2] == 'O' && x[4] == 'O' && x[6] == 'O'){
 			grid(x);
 			std::cout << "\t\tPLAYER " << i << " WINS!!!\n";
-			break;
+			return player_that_won = 2;
 		} else {
 			// CONTINUES WITH GAME IF NO PLAY HAS 3 IN A ROW. ALSO THIS PART OF CODE LOOPS SO THAT BOTH PLAYERS GET A MOVE EACH THEN RESETS.
 			moves--;
@@ -183,7 +185,12 @@ void gameplay(int moves,int i,int position, std::vector<char>x){
 		if(moves == 0){
 			grid(x);
 			std::cout << "\t\tLooks like its a draw! GG";
-			break;
+			return player_that_won = 0;
 		}
 	}
+}
+
+void scoreboard(int player1,int player2){
+	std::cout << "\n\t\tPlayer1 : " << player1;
+	std::cout << "\n\t\tPlayer2 : " << player2 << "\n";
 }
