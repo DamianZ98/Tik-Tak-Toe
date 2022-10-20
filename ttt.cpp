@@ -27,7 +27,6 @@ int main(){
 		grid(x);
 		
 		// Gameplay
-		gameplay(moves,i,position,x);
 		player_that_won = gameplay(moves,i,position,x);
 
 		if(player_that_won == 1){
