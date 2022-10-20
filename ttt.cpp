@@ -26,7 +26,7 @@ int main(){
 		// Gameplay
 		gameplay(moves,i,position,x);
 
-		std::cout << "\n\t\tWould you like to play again?(y/n) : ";
+		std::cout << "\n\tWould you like to play again?(y/n) : ";
 		std::cin>> decision;
 		if(decision == 'y'){
 			std::cout << "\n\n\t====================================================\n\n";
